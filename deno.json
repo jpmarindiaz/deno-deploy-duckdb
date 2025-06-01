@@ -1,0 +1,13 @@
+{
+  "tasks": {
+    "init": "deno run --allow-ffi --allow-net --allow-read --allow-write --allow-env scripts/init_db.ts",
+    "dev": "deno serve --port 8000 --allow-ffi --allow-net --allow-read --allow-env main.ts",
+    "start": "deno serve --allow-ffi --allow-net --allow-read --allow-env main.ts"
+  },
+  "imports": {
+    "@duckdb/node-api": "npm:@duckdb/node-api"
+  },
+  "compilerOptions": {
+    "lib": ["deno.window", "dom"]
+  }
+} 
